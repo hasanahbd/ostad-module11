@@ -6,6 +6,7 @@
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
         
+        
     @endif
     <h2>Product List</h2>
     <a href="{{ route('products.create') }}" class="btn btn-success mb-3">New Product</a>

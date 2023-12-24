@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('products', 'App\Http\Controllers\ProductController');
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+
+Route::resource('sales', 'App\Http\Controllers\SaleController');
+Route::get('/','App\Http\Controllers\SaleController@dashboard' )->name('home');
